@@ -1,0 +1,17 @@
+#cloud-config
+hostname: ubuntu-server-cloud-init-tpl
+manage_etc_hosts: true
+fqdn: ubuntu-server-cloud-init-tpl
+ssh_authorized_keys:
+  - my-ssh-key
+chpasswd:
+  expire: False
+users:
+  - default
+package_update: true
+package_upgrade: true
+runcmd: [systemctl, start, qemu-guest-agent]
+packages:
+  - qemu-guest-agent
+  - git
+  - curl
