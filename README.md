@@ -1,5 +1,9 @@
 # cloud init
 
+## cloud-init.yaml file
+
+create cloud-init.yaml file in `/var/lib/vz/snippets/cloud-init.yaml`
+
 ## create vm template
 
 ```
